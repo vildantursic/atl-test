@@ -1,15 +1,19 @@
 {
   "name": "atlas-web",
   "scripts": {
-    "start": "cross-env NODE_ENV=development parcel index.html ",
+    "start": "cross-env NODE_ENV=development parcel index.html --port 3000",
     "build": "cross-env NODE_ENV=production parcel build index.html --no-minify --public-url /"
   },
   "dependencies": {
+    "antd": "^3.9.3",
     "autoprefixer": "^7.2.1",
     "babel-preset-react-app": "^3.1.0",
     "parcel-bundler": "latest",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react": "^0.14.0 || ^15.0.0-0 || ^16.0.0-0",
+    "react-dom": ">=16.0.0",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
+    "redux": "^2.0.0 || ^3.0.0 || ^4.0.0-0"
   },
   "postcss": {
     "modules": false,
@@ -26,11 +30,14 @@
     }
   },
   "devDependencies": {
+    "babel-eslint": "^9.0.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "cross-env": "^5.1.1",
     "eslint": "^5.3.0",
     "eslint-config-airbnb": "17.1.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
-    "eslint-plugin-react": "^7.11.0"
+    "eslint-plugin-react": "^7.11.0",
+    "node-sass": "^4.9.3"
   }
 }
