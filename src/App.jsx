@@ -5,16 +5,12 @@ import { Drawer, Button, List } from 'antd';
 import MapView from './pages/MapView';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      visible: false,
-      routes: [
-        { name: 'Map', link: '/' },
-      ],
-    };
-  }
+  state = {
+    visible: false,
+    routes: [
+      { name: 'Map', link: '/' },
+    ],
+  };
 
   onClose = () => {
     this.setState({
@@ -36,7 +32,7 @@ class App extends Component {
         <Router>
           <div>
             <Drawer
-              title="Links"
+              title="Settings"
               placement="right"
               closable={false}
               onClose={this.onClose}
@@ -50,9 +46,14 @@ class App extends Component {
               />
             </Drawer>
             <div>
-              <Button style={{ position: 'absolute', zIndex: '100' }} type="primary" onClick={this.showDrawer}>
-                  Open
-              </Button>
+              <Button
+                type="primary"
+                shape="circle"
+                icon="setting"
+                className="menu-button"
+                onClick={this.showDrawer}
+              />
+
               <Route exact path="/" component={MapView} />
             </div>
           </div>

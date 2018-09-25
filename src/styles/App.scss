@@ -1,1 +1,8 @@
 @import "./components/map";
+
+.menu-button {
+  top: 10px;
+  left: 10px;
+  position: absolute;
+  z-index: 100;
+}
