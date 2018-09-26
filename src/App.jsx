@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { Drawer, Button, List } from 'antd';
 
+import 'mapbox-gl/dist/mapbox-gl.css';
+
 import MapView from './pages/MapView';
 
 class App extends Component {
